@@ -643,6 +643,20 @@
 #endif//GLM_LANG
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+// ADL 
+
+// User defines: GLM_VECTOR_ADL
+#if defined(GLM_ADL_FRIENDLY)
+#	define GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+#	define GLM_ADL_FRIENDLY_DETAIL_END()
+#	define GLM_ADL_FRIENDLY_DETAIL_INJECT(x) namespace detail { x } // namespace detail
+#else
+#	define GLM_ADL_FRIENDLY_DETAIL_BEGIN() namespace detail {
+#	define GLM_ADL_FRIENDLY_DETAIL_END() } // namespace detail
+#	define GLM_ADL_FRIENDLY_DETAIL_INJECT(x)
+#endif
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 // Qualifiers 
 
 // User defines: GLM_FORCE_INLINE GLM_FORCE_CUDA

@@ -27,8 +27,8 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 #if(GLM_COMPONENT == GLM_COMPONENT_CXX98)
 
 	//////////////////////////////////////
@@ -1005,7 +1005,7 @@ namespace detail
 
 #endif//(GLM_COMPONENT == GLM_COMPONENT_CXX98)
 
-}//namespace detail
+GLM_ADL_FRIENDLY_DETAIL_END()
 
 	GLM_FUNC_QUALIFIER half abs(half const & x)
 	{

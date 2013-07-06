@@ -36,8 +36,8 @@
 #include "_swizzle.hpp"
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 	template <typename T> struct tref2;
 	template <typename T> struct tref3;
 	template <typename T> struct tref4;
@@ -67,15 +67,15 @@ namespace detail
 			struct{value_type s, t;};
 
 #		if(defined(GLM_SWIZZLE))
-			_GLM_SWIZZLE2_2_MEMBERS(value_type, glm::detail::tvec2<value_type>, x, y)
-			_GLM_SWIZZLE2_2_MEMBERS(value_type, glm::detail::tvec2<value_type>, r, g)
-			_GLM_SWIZZLE2_2_MEMBERS(value_type, glm::detail::tvec2<value_type>, s, t)
-			_GLM_SWIZZLE2_3_MEMBERS(value_type, glm::detail::tvec3<value_type>, x, y)
-			_GLM_SWIZZLE2_3_MEMBERS(value_type, glm::detail::tvec3<value_type>, r, g)
-			_GLM_SWIZZLE2_3_MEMBERS(value_type, glm::detail::tvec3<value_type>, s, t)
-			_GLM_SWIZZLE2_4_MEMBERS(value_type, glm::detail::tvec4<value_type>, x, y)
-			_GLM_SWIZZLE2_4_MEMBERS(value_type, glm::detail::tvec4<value_type>, r, g)
-			_GLM_SWIZZLE2_4_MEMBERS(value_type, glm::detail::tvec4<value_type>, s, t)
+			_GLM_SWIZZLE2_2_MEMBERS(value_type, tvec2<value_type>, x, y)
+			_GLM_SWIZZLE2_2_MEMBERS(value_type, tvec2<value_type>, r, g)
+			_GLM_SWIZZLE2_2_MEMBERS(value_type, tvec2<value_type>, s, t)
+			_GLM_SWIZZLE2_3_MEMBERS(value_type, tvec3<value_type>, x, y)
+			_GLM_SWIZZLE2_3_MEMBERS(value_type, tvec3<value_type>, r, g)
+			_GLM_SWIZZLE2_3_MEMBERS(value_type, tvec3<value_type>, s, t)
+			_GLM_SWIZZLE2_4_MEMBERS(value_type, tvec4<value_type>, x, y)
+			_GLM_SWIZZLE2_4_MEMBERS(value_type, tvec4<value_type>, r, g)
+			_GLM_SWIZZLE2_4_MEMBERS(value_type, tvec4<value_type>, s, t)
 #		endif//(defined(GLM_SWIZZLE))
 		};
 #	elif(GLM_COMPONENT == GLM_COMPONENT_CXX98)
@@ -84,16 +84,16 @@ namespace detail
 
 #		if(defined(GLM_SWIZZLE))
 			// Defines all he swizzle operator as functions
-			GLM_SWIZZLE_GEN_REF_FROM_VEC2(value_type, detail::tvec2, detail::tref2)
-			GLM_SWIZZLE_GEN_VEC_FROM_VEC2(value_type, detail::tvec2, detail::tvec2, detail::tvec3, detail::tvec4)
+			GLM_SWIZZLE_GEN_REF_FROM_VEC2(value_type, tvec2, tref2)
+			GLM_SWIZZLE_GEN_VEC_FROM_VEC2(value_type, tvec2, tvec2, tvec3, tvec4)
 #		endif//(defined(GLM_SWIZZLE))
 #	else //(GLM_COMPONENT == GLM_COMPONENT_ONLY_XYZW)
 		value_type x, y;
 
 #		if(defined(GLM_SWIZZLE))
 			// Defines all he swizzle operator as functions
-			GLM_SWIZZLE_GEN_REF2_FROM_VEC2_SWIZZLE(value_type, detail::tvec2, detail::tref2, x, y)
-			GLM_SWIZZLE_GEN_VEC_FROM_VEC2_COMP(value_type, detail::tvec2, detail::tvec2, detail::tvec3, detail::tvec4, x, y)
+			GLM_SWIZZLE_GEN_REF2_FROM_VEC2_SWIZZLE(value_type, tvec2, tref2, x, y)
+			GLM_SWIZZLE_GEN_VEC_FROM_VEC2_COMP(value_type, tvec2, tvec2, tvec3, tvec4, x, y)
 #		endif//(defined(GLM_SWIZZLE))
 #	endif//GLM_COMPONENT
 
@@ -236,10 +236,10 @@ namespace detail
 		T & x;
 		T & y;
 	};
+	
+GLM_ADL_FRIENDLY_DETAIL_END()
 
-	GLM_DETAIL_IS_VECTOR(tvec2);
-
-} //namespace detail
+	GLM_ADL_FRIENDLY_DETAIL_INJECT( using glm::tvec2; using glm::tref2; GLM_DETAIL_IS_VECTOR(tvec2); )
 
 	/// @addtogroup core_precision
 	/// @{

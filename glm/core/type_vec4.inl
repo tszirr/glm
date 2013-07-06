@@ -27,8 +27,8 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 	template <typename T>
 	GLM_FUNC_QUALIFIER GLM_CONSTEXPR typename tvec4<T>::size_type tvec4<T>::length() const
 	{
@@ -1374,5 +1374,5 @@ namespace detail
 		return tvec4<T>(this->x, this->y, this->z, this->w);
 	}
 
-}//namespace detail
+GLM_ADL_FRIENDLY_DETAIL_END()
 }//namespace glm

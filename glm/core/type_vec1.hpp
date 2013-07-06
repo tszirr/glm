@@ -36,8 +36,8 @@
 #include "_swizzle.hpp"
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 	template <typename T> struct tref1;
 	template <typename T> struct tref2;
 	template <typename T> struct tref3;
@@ -189,9 +189,13 @@ namespace detail
 
 		T& x;
 	};
+	
+GLM_ADL_FRIENDLY_DETAIL_END()
 
-	GLM_DETAIL_IS_VECTOR(tvec1);
+	GLM_ADL_FRIENDLY_DETAIL_INJECT( using glm::tvec1; using glm::tref1; GLM_DETAIL_IS_VECTOR(tvec1); )
 
+namespace detail
+{
 	typedef detail::tvec1<highp_float>		highp_vec1_t;
 	typedef detail::tvec1<mediump_float>	mediump_vec1_t;
 	typedef detail::tvec1<lowp_float>		lowp_vec1_t;
@@ -203,6 +207,7 @@ namespace detail
 	typedef detail::tvec1<lowp_uint>		lowp_uvec1_t;
 
 }//namespace detail
+
 }//namespace glm
 
 #ifndef GLM_EXTERNAL_TEMPLATE

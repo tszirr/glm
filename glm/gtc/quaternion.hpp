@@ -50,8 +50,8 @@
 #endif
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 	template <typename T> 
 	struct tquat// : public genType<T, tquat>
 	{
@@ -96,55 +96,57 @@ namespace detail
 	};
 
 	template <typename T> 
-	detail::tquat<T> operator- (
-		detail::tquat<T> const & q);
+	tquat<T> operator- (
+		tquat<T> const & q);
 
 	template <typename T> 
-	detail::tquat<T> operator+ ( 
-		detail::tquat<T> const & q, 
-		detail::tquat<T> const & p); 
+	tquat<T> operator+ ( 
+		tquat<T> const & q, 
+		tquat<T> const & p); 
 
 	template <typename T> 
-	detail::tquat<T> operator* ( 
-		detail::tquat<T> const & q, 
-		detail::tquat<T> const & p); 
+	tquat<T> operator* ( 
+		tquat<T> const & q, 
+		tquat<T> const & p); 
 
 	template <typename T> 
-	detail::tvec3<T> operator* (
-		detail::tquat<T> const & q, 
-		detail::tvec3<T> const & v);
+	tvec3<T> operator* (
+		tquat<T> const & q, 
+		tvec3<T> const & v);
 
 	template <typename T> 
-	detail::tvec3<T> operator* (
-		detail::tvec3<T> const & v,
-		detail::tquat<T> const & q);
+	tvec3<T> operator* (
+		tvec3<T> const & v,
+		tquat<T> const & q);
 
 	template <typename T> 
-	detail::tvec4<T> operator* (
-		detail::tquat<T> const & q, 
-		detail::tvec4<T> const & v);
+	tvec4<T> operator* (
+		tquat<T> const & q, 
+		tvec4<T> const & v);
 
 	template <typename T> 
-	detail::tvec4<T> operator* (
-		detail::tvec4<T> const & v,
-		detail::tquat<T> const & q);
+	tvec4<T> operator* (
+		tvec4<T> const & v,
+		tquat<T> const & q);
 
 	template <typename T> 
-	detail::tquat<T> operator* (
-		detail::tquat<T> const & q, 
-		typename detail::tquat<T>::value_type const & s);
+	tquat<T> operator* (
+		tquat<T> const & q, 
+		typename tquat<T>::value_type const & s);
 
 	template <typename T> 
-	detail::tquat<T> operator* (
-		typename detail::tquat<T>::value_type const & s,
-		detail::tquat<T> const & q);
+	tquat<T> operator* (
+		typename tquat<T>::value_type const & s,
+		tquat<T> const & q);
 
 	template <typename T> 
-	detail::tquat<T> operator/ (
-		detail::tquat<T> const & q, 
-		typename detail::tquat<T>::value_type const & s);
+	tquat<T> operator/ (
+		tquat<T> const & q, 
+		typename tquat<T>::value_type const & s);
 
-} //namespace detail
+GLM_ADL_FRIENDLY_DETAIL_END()
+
+	GLM_ADL_FRIENDLY_DETAIL_INJECT( using glm::tquat; )
 
 	/// @addtogroup gtc_quaternion
 	/// @{

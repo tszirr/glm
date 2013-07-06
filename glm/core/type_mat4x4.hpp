@@ -32,8 +32,8 @@
 #include "type_mat.hpp"
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 	template <typename T> struct tvec1;
 	template <typename T> struct tvec2;
 	template <typename T> struct tvec3;
@@ -263,7 +263,9 @@ namespace detail
 	GLM_FUNC_DECL tmat4x4<T> const operator++ (
 		tmat4x4<T> const & m, int);
 
-} //namespace detail
+GLM_ADL_FRIENDLY_DETAIL_END()
+
+	GLM_ADL_FRIENDLY_DETAIL_INJECT( using glm::tmat4x4; )
 
 	/// @addtogroup core_precision
 	/// @{

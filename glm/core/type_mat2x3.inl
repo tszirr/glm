@@ -27,8 +27,8 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 	template <typename T>
 	GLM_FUNC_QUALIFIER GLM_CONSTEXPR typename tmat2x3<T>::size_type tmat2x3<T>::length() const
 	{
@@ -641,5 +641,5 @@ namespace detail
 	{
 		return (m1[0] != m2[0]) || (m1[1] != m2[1]);
 	}
-} //namespace detail
+GLM_ADL_FRIENDLY_DETAIL_END()
 } //namespace glm

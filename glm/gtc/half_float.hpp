@@ -45,8 +45,8 @@
 #endif
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 #if(GLM_COMPONENT == GLM_COMPONENT_CXX98)
 	template <>
 	struct tvec2<half>
@@ -346,8 +346,7 @@ namespace detail
 		GLM_FUNC_DECL tref4<half> swizzle(comp X, comp Y, comp Z, comp W);
 	};
 #endif//(GLM_COMPONENT == GLM_COMPONENT_CXX98)
-}
-//namespace detail
+GLM_ADL_FRIENDLY_DETAIL_END()
 
 	/// @addtogroup gtc_half_float
 	/// @{

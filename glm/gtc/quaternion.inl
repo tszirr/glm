@@ -29,8 +29,8 @@
 #include <limits>
 
 namespace glm{
-namespace detail
-{
+GLM_ADL_FRIENDLY_DETAIL_BEGIN()
+
 	template <typename T>
 	GLM_FUNC_QUALIFIER typename tquat<T>::size_type tquat<T>::length() const
 	{
@@ -314,7 +314,7 @@ namespace detail
 		return (q1.x != q2.x) || (q1.y != q2.y) || (q1.z != q2.z) || (q1.w != q2.w);
 	}
 
-}//namespace detail
+GLM_ADL_FRIENDLY_DETAIL_END()
 
 	////////////////////////////////////////////////////////
 	template <typename T> 
