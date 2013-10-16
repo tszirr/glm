@@ -125,11 +125,13 @@ namespace detail
 
 		GLM_FUNC_DECL tvec2(tref2<T> const & r);
 
+#ifdef GLM_SWIZZLE
 		template <int E0, int E1>
 		GLM_FUNC_DECL tvec2(const glm::detail::swizzle<2,T,tvec2<T>,E0,E1,-1,-2>& that)
 		{
 			*this = that();
 		}
+#endif
 
 		//////////////////////////////////////
 		// Convertion constructors

@@ -163,6 +163,7 @@ namespace detail
 		template <typename A, typename B> 
 		GLM_FUNC_DECL explicit tvec3(A const & s, tref2<B> const & v);
 
+#ifdef GLM_SWIZZLE
 		template <int E0, int E1, int E2>
 		GLM_FUNC_DECL tvec3(glm::detail::swizzle<3, T, tvec3<T>, E0, E1, E2, -1> const & that)
 		{
@@ -180,6 +181,7 @@ namespace detail
 		{
 			*this = tvec3<T>(s, v());
 		}
+#endif
 
 		//////////////////////////////////////
 		// Unary arithmetic operators

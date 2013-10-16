@@ -31,11 +31,23 @@
 
 #include "type_gentype.hpp"
 
-namespace glm{
-namespace detail
+namespace glm
 {
-
-}//namespace detail
+	enum comp
+	{
+		X = 0,
+		R = 0,
+		S = 0,
+		Y = 1,
+		G = 1,
+		T = 1,
+		Z = 2,
+		B = 2,
+		P = 2,
+		W = 3,
+		A = 3,
+		Q = 3
+	};
 }//namespace glm
 
 #endif//glm_core_type_vec
