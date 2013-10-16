@@ -13,7 +13,7 @@
 namespace glm{
 namespace detail
 {
-	GLM_FUNC_QUALIFIER std::string format(const char* msg, ...)
+	GLM_INLINE std::string format(const char* msg, ...)
 	{
 		std::size_t const STRING_BUFFER(4096);
 		char text[STRING_BUFFER];
@@ -41,27 +41,27 @@ namespace detail
 	////////////////////////////////
 	// Scalars
 
-	GLM_FUNC_QUALIFIER std::string to_string(detail::half const & x)
+	GLM_INLINE std::string to_string(detail::half const & x)
 	{
 		return detail::format("half(%2.4f)", float(x));
 	}
 
-	GLM_FUNC_QUALIFIER std::string to_string(float x)
+	GLM_INLINE std::string to_string(float x)
 	{
 		return detail::format("float(%f)", x);
 	}
 
-	GLM_FUNC_QUALIFIER std::string to_string(double x)
+	GLM_INLINE std::string to_string(double x)
 	{
 		return detail::format("double(%f)", x);
 	}
 
-	GLM_FUNC_QUALIFIER std::string to_string(int x)
+	GLM_INLINE std::string to_string(int x)
 	{
 		return detail::format("int(%d)", x);
 	}
 
-	GLM_FUNC_QUALIFIER std::string to_string(unsigned int x)
+	GLM_INLINE std::string to_string(unsigned int x)
 	{
 		return detail::format("uint(%d)", x);
 	}
@@ -69,7 +69,7 @@ namespace detail
 	////////////////////////////////
 	// Bool vectors
 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec2<bool> const & v
 	)
@@ -79,7 +79,7 @@ namespace detail
 			v.y ? detail::True : detail::False);
 	}
 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec3<bool> const & v
 	)
@@ -90,7 +90,7 @@ namespace detail
 			v.z ? detail::True : detail::False);
 	}
 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec4<bool> const & v
 	)
@@ -106,7 +106,7 @@ namespace detail
 	// Half vectors
 
 	template <>
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec2<detail::half> const & v
 	)
@@ -115,7 +115,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec3<detail::half> const & v
 	)
@@ -124,7 +124,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec4<detail::half> const & v
 	)
@@ -136,7 +136,7 @@ namespace detail
 	// Float vectors
 
 	template <>
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec2<float> const & v
 	)
@@ -145,7 +145,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec3<float> const & v
 	)
@@ -154,7 +154,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec4<float> const & v
 	)
@@ -166,7 +166,7 @@ namespace detail
 	// Double vectors
 
 	template <>
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec2<double> const & v
 	)
@@ -175,7 +175,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec3<double> const & v
 	)
@@ -184,7 +184,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec4<double> const & v
 	)
@@ -196,7 +196,7 @@ namespace detail
 	// Int vectors
 
 	template <>
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec2<int> const & v
 	)
@@ -205,7 +205,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec3<int> const & v
 	)
@@ -214,7 +214,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec4<int> const & v
 	)
@@ -226,7 +226,7 @@ namespace detail
 	// Unsigned int vectors
 
 	template <>
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec2<unsigned int> const & v
 	)
@@ -235,7 +235,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec3<unsigned int> const & v
 	)
@@ -244,7 +244,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tvec4<unsigned int> const & v
 	)
@@ -256,7 +256,7 @@ namespace detail
 	// Half matrices
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x2<detail::half> const & m
 	)
@@ -267,7 +267,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x3<detail::half> const & x
 	)
@@ -278,7 +278,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x4<detail::half> const & x
 	)
@@ -289,7 +289,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x2<detail::half> const & x
 	)
@@ -301,7 +301,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x3<detail::half> const & x
 	)
@@ -313,7 +313,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x4<detail::half> const & x
 	)
@@ -325,7 +325,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x2<detail::half> const & x
 	)
@@ -338,7 +338,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x3<detail::half> const & x
 	)
@@ -351,7 +351,7 @@ namespace detail
 	}
 
 	template <>
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x4<detail::half> const & x
 	)
@@ -367,7 +367,7 @@ namespace detail
 	// Float matrices
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x2<float> const & x
 	)
@@ -378,7 +378,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x3<float> const & x
 	)
@@ -389,7 +389,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x4<float> const & x
 	)
@@ -400,7 +400,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x2<float> const & x
 	)
@@ -412,7 +412,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x3<float> const & x
 	)
@@ -424,7 +424,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x4<float> const & x
 	)
@@ -436,7 +436,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x2<float> const & x
 	)
@@ -449,7 +449,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x3<float> const & x
 	)
@@ -462,7 +462,7 @@ namespace detail
 	}
 
 	template <>
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x4<float> const & x
 	)
@@ -478,7 +478,7 @@ namespace detail
 	// Double matrices
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x2<double> const & x
 	)
@@ -489,7 +489,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x3<double> const & x
 	)
@@ -500,7 +500,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat2x4<double> const & x
 	)
@@ -511,7 +511,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x2<double> const & x
 	)
@@ -523,7 +523,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x3<double> const & x
 	)
@@ -535,7 +535,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat3x4<double> const & x
 	)
@@ -547,7 +547,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x2<double> const & x
 	)
@@ -560,7 +560,7 @@ namespace detail
 	}
 
 	template <> 
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x3<double> const & x
 	)
@@ -573,7 +573,7 @@ namespace detail
 	}
 
 	template <>
-	GLM_FUNC_QUALIFIER std::string to_string
+	GLM_INLINE std::string to_string
 	(
 		detail::tmat4x4<double> const & x
 	)
