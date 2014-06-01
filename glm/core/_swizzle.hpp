@@ -31,25 +31,6 @@
 
 #include "_swizzle_func.hpp"
 
-namespace glm
-{
-	enum comp
-	{
-		X = 0,
-		R = 0,
-		S = 0,
-		Y = 1,
-		G = 1,
-		T = 1,
-		Z = 2,
-		B = 2,
-		P = 2,
-		W = 3,
-		A = 3,
-		Q = 3
-	};
-}//namespace glm
-
 namespace glm{
 namespace detail
 {
@@ -120,7 +101,7 @@ namespace detail
 		GLM_FUNC_QUALIFIER _swizzle_base2& operator= (const VecType& that)
 		{
 			struct op { 
-				void operator() (value_type& e, value_type& t) { e = t; } 
+				GLM_FUNC_QUALIFIER void operator() (value_type& e, value_type& t) { e = t; } 
 			};
 			_apply_op(that, op());
 			return *this;
@@ -129,7 +110,7 @@ namespace detail
 		GLM_FUNC_QUALIFIER void operator -= (const VecType& that)
 		{
 			struct op { 
-				void operator() (value_type& e, value_type& t) { e -= t; } 
+				GLM_FUNC_QUALIFIER void operator() (value_type& e, value_type& t) { e -= t; } 
 			};
 			_apply_op(that, op());
 		}
@@ -137,7 +118,7 @@ namespace detail
 		GLM_FUNC_QUALIFIER void operator += (const VecType& that)
 		{
 			struct op { 
-				void operator() (value_type& e, value_type& t) { e += t; } 
+				GLM_FUNC_QUALIFIER void operator() (value_type& e, value_type& t) { e += t; } 
 			};
 			_apply_op(that, op());
 		}
@@ -145,7 +126,7 @@ namespace detail
 		GLM_FUNC_QUALIFIER void operator *= (const VecType& that)
 		{
 			struct op { 
-				void operator() (value_type& e, value_type& t) { e *= t; } 
+				GLM_FUNC_QUALIFIER void operator() (value_type& e, value_type& t) { e *= t; } 
 			};
 			_apply_op(that, op());
 		}
@@ -153,7 +134,7 @@ namespace detail
 		GLM_FUNC_QUALIFIER void operator /= (const VecType& that)
 		{
 			struct op { 
-				void operator() (value_type& e, value_type& t) { e /= t; } 
+				GLM_FUNC_QUALIFIER void operator() (value_type& e, value_type& t) { e /= t; } 
 			};
 			_apply_op(that, op());
 		}
