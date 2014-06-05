@@ -204,10 +204,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator+=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator+=(U s)
 	{
 		this->x += T(s);
 		this->y += T(s);
@@ -228,10 +225,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator-=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator-=(U s)
 	{
 		this->x -= T(s);
 		this->y -= T(s);
@@ -252,10 +246,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator*=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator*=(U s)
 	{
 		this->x *= T(s);
 		this->y *= T(s);
@@ -276,10 +267,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator/=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator/=(U s)
 	{
 		this->x /= T(s);
 		this->y /= T(s);
@@ -342,10 +330,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator%=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator%=(U s)
 	{
 		this->x %= T(s);
 		this->y %= T(s);
@@ -366,10 +351,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator&=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator&=(U s)
 	{
 		this->x &= T(s);
 		this->y &= T(s);
@@ -390,10 +372,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator|=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator|=(U s)
 	{
 		this->x |= T(s);
 		this->y |= T(s);
@@ -414,10 +393,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator^=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator^=(U s)
 	{
 		this->x ^= T(s);
 		this->y ^= T(s);
@@ -438,10 +414,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator<<=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator<<=(U s)
 	{
 		this->x <<= T(s);
 		this->y <<= T(s);
@@ -462,10 +435,7 @@ GLM_ADL_FRIENDLY_DETAIL_BEGIN()
 
 	template <typename T>
 	template <typename U> 
-	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator>>=
-	(
-		U const & s
-	)
+	GLM_FUNC_QUALIFIER tvec2<T> & tvec2<T>::operator>>=(U s)
 	{
 		this->x >>= T(s);
 		this->y >>= T(s);
