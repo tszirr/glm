@@ -167,19 +167,19 @@ namespace detail
 		GLM_FUNC_DECL tvec2<T> & operator= (tvec2<U> const & v);
 
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator+=(U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator+=(U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator+=(tvec2<U> const & v);
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator-=(U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator-=(U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator-=(tvec2<U> const & v);
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator*=(U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator*=(U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator*=(tvec2<U> const & v);
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator/=(U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator/=(U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator/=(tvec2<U> const & v);
 		GLM_FUNC_DECL tvec2<T> & operator++();
@@ -189,27 +189,27 @@ namespace detail
 		// Unary bit operators
 
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator%= (U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator%= (U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator%= (tvec2<U> const & v);
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator&= (U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator&= (U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator&= (tvec2<U> const & v);
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator|= (U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator|= (U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator|= (tvec2<U> const & v);
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator^= (U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator^= (U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator^= (tvec2<U> const & v);
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator<<=(U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator<<=(U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator<<=(tvec2<U> const & v);
 		template <typename U> 
-		GLM_FUNC_DECL tvec2<T> & operator>>=(U const & s);
+		GLM_FUNC_DECL tvec2<T> & operator>>=(U s);
 		template <typename U> 
 		GLM_FUNC_DECL tvec2<T> & operator>>=(tvec2<U> const & v);
 
